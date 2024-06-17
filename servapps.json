@@ -20,5 +20,5 @@
     "logo": [],
     "icon": "https://github.com/redlib-org/redlib/blob/main/static/logo.png",
     "artefacts": {},
-    "compose": "https://github.com/redlib-org/redlib/blob/main/compose.yaml"
+    "compose": "https://github.com/BigYolex/BigYolex.github.io/blob/main/servapps/redlib/cosmos-compose.json"
   },
