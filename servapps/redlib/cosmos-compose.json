@@ -1,24 +1,40 @@
-services:
-  redlib:
-    image: quay.io/redlib/redlib:latest
-    restart: always
-    container_name: "redlib"
-    ports:
-      - 127.0.0.1:8080:8080
-    user: nobody
-    read_only: true
-    security_opt:
-      - no-new-privileges:true
-      # - seccomp=seccomp-redlib.json
-    cap_drop:
-      - ALL
-    env_file: .env
-    networks:
-      - redlib
-    healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "--tries=1", "http://localhost:8080/settings"]
-      interval: 5m
-      timeout: 3s
-
-networks:
-  redlib:
+{
+    "cosmos-installer": {},
+    "minVersion": "0.0.0",
+    "services": {
+        "{ServiceName}": {
+            "image": "quay.io/redlib/redlib:latest",
+            "container_name": "{ServiceName}",
+            "environment": [
+                "AP_QUEUE_MODE=MEMORY",
+                "AP_DB_TYPE=SQLITE3",
+                "AP_FRONTEND_URL=https://{Hostnames.{StaticServiceName}.{StaticServiceName}.host}"
+            ],
+            "labels": {
+                "cosmos-persistent-env": "",
+                "cosmos-force-network-secured": "true",
+                "cosmos-auto-update": "true",
+                "cosmos-icon": "https://github.com/redlib-org/redlib/blob/main/static/logo.png"
+            },
+            "volumes": [{
+                "source": "{ServiceName}-RedLib",
+                "target": "/root/.redlib",
+                "type": "volume"
+            }],
+            "routes": [{
+                "name": "{ServiceName}",
+                "description": "Expose {ServiceName} to the web",
+                "useHost": true,
+                "target": "http://{ServiceName}:8080",
+                "mode": "SERVAPP",
+                "Timeout": 14400000,
+                "ThrottlePerMinute": 12000,
+                "BlockCommonBots": true,
+                "SmartShield": {
+                    "Enabled": true
+                }
+            }],
+            "restart": "unless-stopped"
+        }
+    }
+}
