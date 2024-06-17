@@ -23,4 +23,11 @@ jobs:
 
     - name: Build
       run: npm run build
+      env:
+        CI: false  # Add this line to prevent CI=true which can cause exit code 254
 
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
