@@ -17,10 +17,10 @@
       ],
       "id": "RedLib",
       "screenshots": [
-        "https://cosmos.manhtuong.net/servapps/Yopass/screenshots/1.png"
+        "https://bigyolex.github.io/servapps/redlib/logo.png"
       ],
       "logo": [],
-      "icon": "https://github.com/redlib-org/redlib/blob/main/static/logo.png",
+      "icon": "https://bigyolex.github.io/servapps/redlib/logo.png",
       "artefacts": {},
       "compose": "https://bigyolex.github.io/servapps/redlib/cosmos-compose.json"
     }
