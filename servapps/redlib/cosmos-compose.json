@@ -4,7 +4,7 @@
     "services": {
         "{ServiceName}": {
             "image": "quay.io/redlib/redlib:latest",
-            "container_name": "{ServiceName}",
+            "container_name": "redlib",
             "environment": [
                 "MAX_CONCURRENT_SESSIONS=100"
             ],
@@ -16,10 +16,10 @@
             },
             "routes": [
                 {
-                    "name": "{ServiceName}",
-                    "description": "Expose {ServiceName} to the web",
+                    "name": "RedLib",
+                    "description": "Expose Redlib to the web",
                     "useHost": true,
-                    "target": "http://{ServiceName}:3000",
+                    "target": "http://redlib:3000",
                     "mode": "SERVAPP",
                     "Timeout": 14400000,
                     "ThrottlePerMinute": 12000,
