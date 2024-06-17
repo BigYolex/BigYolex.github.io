@@ -1,0 +1,24 @@
+[
+  {
+    "name": "RedLib,
+    "longDescription": "<p>An Alternate private fron-end to Reddit, with its origins in LibReddit.</p>",
+    "description": "An Alternate private fron-end to Reddit",
+    "tags": [
+      "RedLib",
+      "RedditAlternative"
+    ],
+    "repository": "https://github.com/redlib-org/redlib",
+    "image": "https://github.com/redlib-org/redlib",
+    "supported_architectures": [
+      "amd64",
+      "arm64"
+    ],
+        "id": "RedLib",
+    "screenshots": [
+      "",
+    ],
+    "logo": [],
+    "icon": "https://github.com/redlib-org/redlib/blob/main/static/logo.png",
+    "artefacts": {},
+    "compose": "https://github.com/redlib-org/redlib/blob/main/compose.yaml"
+  },
