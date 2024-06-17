@@ -1,0 +1,9 @@
+{
+    "name": "RedLib",
+    "longDescription": "<p>An Alternate private front-end to Reddit, with its origins in LibReddit. Access Reddit privately with a clean interface, no matter what device you use. Whether on your computer without a smartphone or dealing with a Reddit request, just open your RedLib instance in a browser tab and enjoy.</p>",
+    "description": "RedLib is a web-based self-hosted alternative front-end to Reddit, designed for both mobile and desktop.",
+    "tags": ["RedLib", "Reddit", "Alternative", "self-hosted", "private"],
+    "repository": "https://github.com/redlib-org/redlib",
+    "image": "https://github.com/redlib-org/redlib",
+    "supported_architectures": ["amd64", "arm64"]
+}
