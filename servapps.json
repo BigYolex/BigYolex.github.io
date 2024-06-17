@@ -10,7 +10,7 @@
         "RedditAlternative"
       ],
       "repository": "https://github.com/redlib-org/redlib",
-      "image": "https://github.com/redlib-org/redlib",
+      "image": "https://github.com/redlib-org/redlib",  
       "supported_architectures": [
         "amd64",
         "arm64"
